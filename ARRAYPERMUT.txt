@@ -1,0 +1,21 @@
+string twoArrays(int k, vector<int> A, vector<int> B) {
+	vector<int> A1,B1;
+	string st;
+	for(int i=0;i<A.size();i++){
+		for(int j=0;j<B.size();j++){
+			if(A.at(i)+B.at(j)<=k)
+			{
+				A1.push_back(A.at(i));
+				B1.push_back(B.at(j));
+			}
+		}
+	}
+	if(A.size()==A1.size() && B.size()==B1.size()){
+		st="YES";
+	}
+	else{
+		st="NO";
+	}
+
+return st;
+}
